@@ -12,7 +12,6 @@ import { TopicListContext } from '@/common/context'
 
 import globalStyles from '@/common/global.less'
 import styles from './style.less'
-import litchiIcon from '@/assets/1.jpg'
 
 type TopicsItem = {
   article: string;
@@ -78,11 +77,6 @@ const Topics: React.FC = () => {
             }}
           />
         </Col>
-        {/* <Col span={5}>
-          <img src={litchiIcon} alt="作者图片"
-            style={{ width: '100%' }} />
-          <p>有疑问请联系：2507332458@qq.com</p>
-        </Col> */}
       </Row>
     </>)
 }
