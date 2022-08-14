@@ -27,6 +27,7 @@
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/4a10aa1f45dc4fb98b31365b75911621.png)
 # 四、文件目录结构说明
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/c9e160d3e7a54751b5530774a26c3aa3.png)![在这里插入图片描述](https://img-blog.csdnimg.cn/90b86fd9366d4ec3a41c4b596e85f234.png)
+
 前端：
  - assets：存放共用的图标、图片
  - common：存放共用的资源，如常量、全局 CSS、公共的 js 工具函数、context 文件
@@ -54,7 +55,7 @@ const [state, setState] = useState()
       'layout': state,
 })} >
 ```
-### 6. 使用 useContext 进行兄弟组件间的数据传输
+### 3. 使用 useContext 进行兄弟组件间的数据传输
 还挺好用的，但是如果是深层传递数据，可能不能一下知道哪里提供数据、都提供了什么数据，会导致代码复杂一点。
 ```javascript
 // createContext
@@ -68,15 +69,15 @@ const TopicListContext = React.createContext({} as IContextProps)
 // 使用数据
 const { setSearchResult } = useContext(TopicListContext)
 ```
-### 7. 定义公共组件 Header ，实现组件的复用
+### 4. 定义公共组件 Header ，实现组件的复用
 通过 props 的 isSearch 参数来判断是否显示搜索框。
 通过获取 url 里的 id 来判断是否显示二级目录。
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/1a60f3db40144e3dba7cc3cec716bbe7.png)
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/e9b030ee8270409d918cc3094c5bc40c.png)
-### 3. 使用 umi 进行路由管理
+### 5. 使用 umi 进行路由管理
 umi 具有约定式路由，它不需要手写配置，文件系统即路由，通过目录和文件及其命名分析出路由配置。
 我用的是配置式路由，主要是自己实习外没使用过 umi 的路由，所以想试一试。
-### 4.	引入 marked 库，对 markdown 语法进行解析
+### 6.	引入 marked 库，对 markdown 语法进行解析
 解析后的内容可以通过 dangerouslySetInnerHTML 对 div 进行 InnerHTML 的替换。
 ```javascript
 import { marked } from 'marked'
@@ -98,7 +99,7 @@ marked.setOptions({
 <div dangerouslySetInnerHTML={{ __html: marked.parse(res.topic.article)}}>
 </div>
 ```
-### 5.	引入 moment 库，对时间进行格式化
+### 7.	引入 moment 库，对时间进行格式化
 ```javascript
 import moment from 'moment'
 import 'moment/locale/zh-cn'
@@ -107,7 +108,6 @@ moment.locale('zh-cn')
 
 {moment(topic?.created_time).format('LL')}
 ```
-
 
 ### 8. 后台部分
 与博客系统的后台大致相同，使用技术可见该 [博客](https://blog.csdn.net/ladream/article/details/120806160?spm=1001.2014.3001.5501) 
