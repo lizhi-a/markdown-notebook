@@ -14,9 +14,9 @@
  - 使用 mongodb 数据库
 #  三、最终效果
  - 首页
-![在这里插入图片描述](https://img-blog.csdnimg.cn/80ef24044e874ee689fb5bdf9e58b1e2.png)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/00c90bbef69044fbb5a9353ac0316aec.png)
  - 搜索结果
-![在这里插入图片描述](https://img-blog.csdnimg.cn/b33a3aaf471342fb911df2c33babb589.png)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/f653a01158104266a1eec0c4fed94e47.png)
 
  - 新增笔记
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/1bd31af4c55148a2938d00247e7c7ada.png)
