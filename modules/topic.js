@@ -1,41 +1,40 @@
 const mongoose = require('mongoose')
-const user = require('./user')
 
-mongoose.connect('mongodb://localhost/user',{ useNewUrlParser: true ,useUnifiedTopology: true})
+mongoose.connect('mongodb://localhost/user', { useNewUrlParser: true, useUnifiedTopology: true })
 
 var Schema = mongoose.Schema
 
 var topicSchema = new Schema({
-    nickname:{
-        type:String,
-        default:''
+    nickname: {
+        type: String,
+        default: ''
     },
-    model:{
-        type:Number,
-        required:true,
-        enum:[0,1,2,3],
-        default:0
+    model: {
+        type: Number,
+        required: true,
+        enum: [0, 1, 2, 3],
+        default: 0
     },
-    title:{
-        type:String,
-        required:true
+    title: {
+        type: String,
+        required: true
     },
-    article:{
-        type:String,
-        required:true
+    article: {
+        type: String,
+        required: true
     },
-    created_time:{
-        type:Date,
-        default:Date.now
+    created_time: {
+        type: Date,
+        default: Date.now
     },
-    last_modified_time:{
-        type:Date,
-        default:Date.now
+    last_modified_time: {
+        type: Date,
+        default: Date.now
     },
-    userId:{
-        type:String,
-        required:true
+    userId: {
+        type: String,
+        required: true
     }
 })
 
-module.exports = mongoose.model('Topic',topicSchema)
+module.exports = mongoose.model('Topic', topicSchema)
