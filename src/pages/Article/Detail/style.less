@@ -1,0 +1,32 @@
+.content {
+
+  p,
+  span {
+    font-size: 18px;
+  }
+}
+
+.description :global(.ant-descriptions-view) {
+  background-color: transparent;
+  padding: 24px;
+  padding-bottom: 0px;
+  border-bottom: 1px solid #d3d3d3;
+}
+
+.headerIcon {
+  position: absolute;
+  right: 0px;
+
+  span {
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  :global(.anticon-edit):hover {
+    color: #1890ff;
+  }
+
+  :global(.anticon-delete):hover {
+    color: #f50;
+  }
+}

@@ -1,0 +1,58 @@
+p,
+span,
+label {
+  font-size: 18px;
+}
+
+.root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // #daeaf8 e6ddfc
+  background-color: #ecf1f5;
+  font-family: Georgia, serif;
+}
+
+.layout {
+  width: 80%;
+  padding-top: 40px;
+  flex-grow: 0;
+  background-color: transparent !important;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  align-items: center;
+  background-color: transparent;
+  border-bottom: 1px solid #d3d3d3;
+}
+
+.content {
+  padding: 50px 0px;
+}
+
+.content :global(.ant-pro-table-list-toolbar-container) {
+  border-bottom: 1px solid #d3d3d3;
+  padding: 0px;
+  margin: 16px 0;
+
+  p {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+}
+
+
+.ellipsis {
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+.border-bottom {
+  border-bottom: 1px solid #d3d3d3;
+}

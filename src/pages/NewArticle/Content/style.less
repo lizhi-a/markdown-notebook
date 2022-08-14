@@ -1,0 +1,53 @@
+.form {
+
+  :global(label),
+  :global(input),
+  :global(span),
+  :global(textarea) {
+    font-size: 18px;
+  }
+
+  :global(textarea) {
+    height: 400px;
+  }
+
+  .markdownArticle {
+    :global(.ant-form-item-row) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    :global(.ant-form-item-label) {
+      margin-bottom: 14px;
+    }
+
+    :global(.ant-form-item-control) {
+      max-width: 100% !important;
+
+      :global(.ant-input) {
+        width: 50%;
+      }
+    }
+
+    .markdownDiv {
+      display: flex;
+      font-size: 16px;
+
+      .markdownText {
+        display: inline-block;
+        width: 50%;
+        height: 400px;
+        padding: 4px 11px;
+        overflow: scroll;
+
+        border: 1px solid #d9d9d9;
+        background-color: #f4f4f4;
+
+        p {
+          margin-bottom: 0px;
+        }
+      }
+    }
+  }
+}
